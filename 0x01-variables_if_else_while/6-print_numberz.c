@@ -8,6 +8,9 @@
  */
 int main(void)
 {
+Code goes here
+}
+{
 int n;
 for (n = '0' ; n <= '9' ; n++)
 {
