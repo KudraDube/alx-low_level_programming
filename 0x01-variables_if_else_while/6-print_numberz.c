@@ -7,9 +7,11 @@
  */
 int main(void)
 {
-int i;
-for (i = '0' ; i <= '9' ; i++){
+int n;
+for (n = '0' ; n <= '9' ; n++)
+{
 putchar (i);
+}
 putchar('\n');
 return (0);
 }
