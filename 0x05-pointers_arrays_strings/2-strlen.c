@@ -1,13 +1,17 @@
 #include "main.h"
 
 /**
-*mul - multiplies two numbers
-*@a: first number
-*@b: second number
-*Return: returns result
-*/
+ *  * _strlen - return the length of a string
+ *   * @s: char to check
+ *    * Description: this will return the length of a string
+ *     * Return: 0 is success
+ */
 
-int mul(int a, int b)
+int _strlen(char *s)
 {
-	return (a * b);
+		int a = 0;
+
+			for (; *s++;)
+						a++;
+				return (a);
 }

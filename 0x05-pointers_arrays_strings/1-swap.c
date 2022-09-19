@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
-*_isdigit - checks whether a  character is a digit or not
-*@c: tested character
-*Return: 1 if it is, 0 otherwise
-*/
+ *  * swap_int - swaps the value of int a and int b
+ *   * @a: first int
+ *    * @b: second int
+ *     * Return 0
+ */
 
-int _isdigit(int c)
+void swap_int(int *a, int *b)
 {
-	if ((c >= 48) && (c <= 57))
-	{
-		return (1);
-	}
+		int s;
 
-	return (0);
+			s = *a;
+				*a = *b;
+					*b = s;
 }
