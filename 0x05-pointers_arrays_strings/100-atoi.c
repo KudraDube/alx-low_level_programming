@@ -1,38 +1,31 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * _atoi - Convert a string to an integer.
- * @s: The pointer to convert
- * Return: A integer
+ * *main- prints the largest prime factor
+ * *of a number
+ * *
+ * *Return: returns 0
  */
 
-int _atoi(char *s);
+int main(void)
+
 {
-	int c = 0;
-	unsigned int ni = 0;
-	int min = 1;
-	int isi = 0;
+long number = 612852475143;
+int inc;
 
-	while (s[c])
-	{
-		if (s[c] == 45)
-		{
-			min *= -1;
-		}
-		while (s[c] >= 48 && s[c] <= 57)
-		{
-			isi = 1;
-			ni = (ni * 10) + (s[c] - '0');
-			c++;
-		}
+while (inc++ < number / 2)
+{
+if (number % inc == 0)
+										{
+number /= 2;
 
-		if (isi == 1)
-		{
-			break;
-		}
-		c++;
-	}
-	ni *= min;
-	return (ni);
+continue;																			}
+for (inc = 3; inc < number / 2; inc += 2)
+{
+if (number % inc == 0)
+number /= inc;
+										}
+										}
+printf("%ld\n", number);
+return (0);
 }
