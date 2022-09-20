@@ -1,29 +1,25 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * *main- prints the largest prime factor of a number
- * *Return: returns 0
- */
+* _atoi - converts a string to an int
+* @s: the string to be changed
+*
+* Return: the converted int
+*/
 
-int main(void)
-
+int _atoi(char *s)
 {
-long number = 612852475143;
-int inc;
+	int sign = 1;
+	unsigned int num = 0;
 
-while (inc++ < number / 2)
-{
-if (number % inc == 0)
-										{
-number /= 2;
+	do {
+		if (*s == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+			num = num * 10 + (*s - '0');
+		else if (num > 0)
+			break;
+	} while (*s++);
 
-continue;																			}
-for (inc = 3; inc < number / 2; inc += 2)
-{
-if (number % inc == 0)
-number /= inc;
-										}
-										}
-printf("%ld\n", number);
-return (0);
+	return (num * sign);
 }
